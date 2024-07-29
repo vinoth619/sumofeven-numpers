@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum of even numpers in array</title>
+</head>
+<body>
+    <h1>sum of even numpers</h1>
+    <input type="text" id="ins">
+    <button onclick="send()">push to array</button>
+    <button onclick="send1()">result</button>
+    <h2 id="showar"></h2>
+    <h2 id="shower2"></h2>
+    <h2 id="result"></h2>
+
+    <script>
+        var ins=document.getElementById("ins")
+     
+        var ar=[];
+        function send(){
+           ar.push(Number(ins.value));
+           if(ar.length<2){
+            alert("please add one more array value");
+           }
+           document.getElementById("showar").innerHTML="Array value is   : " +ar.toString()
+
+        }
+         var rar=[]
+       var   sum=0;
+        function send1(){
+            
+                for(let i=0; i<ar.length;i++){
+                    if(ar[i]%2==0){
+                     rar.push(ar[i]);
+                     sum+=ar[i]
+
+                    }
+                  
+                }
+                  
+                  console.log(ar)
+                document.getElementById("shower2").innerHTML="array of even numpers : "+rar.toString();
+                document.getElementById("result").innerHTML="sum  of even numpers : "+sum;
+
+
+            }
+        
+    </script>
+    
+</body>
+</html>
